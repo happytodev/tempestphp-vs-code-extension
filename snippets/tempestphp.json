@@ -49,5 +49,30 @@
       "}"
     ],
     "description": "Create a TempestPHP console command."
+  },
+  "Tempest Get Route": {
+    "prefix": "tempest-route-get",
+    "body": [
+      "#[Get(uri: '${1:url}')]",
+      "public function __invoke(): View",
+      "{",
+      "  return view('${2:view-path}.view.php');",
+      "}"
+    ],
+    "description": "Add a get route without parameter."
+  },
+  "Tempest Uri": {
+    "prefix": "tempest-uri",
+    "body": [
+      "uri([${1:Lorem}Controller::class, '${2:function}'], ${3:named-parameter-1}: ${4:named-parameter-1-value});"
+    ],
+    "description": "Generating an URI with parameters."
+  },
+  "Tempest is current Uri": {
+    "prefix": "tempest-is-current-uri",
+    "body": [
+      "is_current_uri([${1:Lorem}Controller::class, '${2:function}'], ${3:named-parameter-1}: ${4:named-parameter-1-value});"
+    ],
+    "description": "Matching the current URI."
   }
 }

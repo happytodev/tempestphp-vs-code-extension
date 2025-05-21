@@ -4,7 +4,9 @@ This extension wish to help you in your daily work with TempestPHP.
 
 ## Features
 
-### Tempest : schedule this function
+### Palette
+
+#### Tempest : schedule this function
 
 Right click everywhere in a function give you access to the `Tempest: schedule this function`.
 
@@ -21,6 +23,14 @@ At the end, you will have something like that :
     {
     ...
 ```
+
+### Snippets
+
+Here are the snippets currently available:
+
+- tempest-route-get : Add a get route without parameter.
+- tempest-uri : Generating an URI with parameters.
+- tempest-is-current-uri : Matching the current URI.
 
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
