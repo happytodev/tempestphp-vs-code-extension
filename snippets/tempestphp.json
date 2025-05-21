@@ -1,0 +1,53 @@
+{
+  "Tempest Controller": {
+    "prefix": "tempest-controller",
+    "body": [
+      "use Tempest\\Http\\Controller;",
+      "use Tempest\\Http\\Response;",
+      "",
+      "final class ${1:ControllerName} extends Controller",
+      "{",
+      "    #[Get('/${2:route}')] ",
+      "    public function index(): Response",
+      "    {",
+      "        return $this->render('${3:template}');",
+      "    }",
+      "}"
+    ],
+    "description": "Creates a TempestPHP controller with a GET route."
+  },
+  "Tempest Model": {
+    "prefix": "tempest-model",
+    "body": [
+      "use Tempest\\Database\\Model;",
+      "",
+      "final class ${1:ModelName} implements Model",
+      "{",
+      "    use HasDatabaseTable;",
+      "",
+      "    public function __construct(",
+      "        public string $id,",
+      "        public string $name",
+      "    ) {}",
+      "}"
+    ],
+    "description": "Create a TempestPHP model with persistence."
+  },
+  "Tempest Console Command": {
+    "prefix": "tempest-command",
+    "body": [
+      "use Tempest\\Console\\Command;",
+      "use Tempest\\Console\\Console;",
+      "",
+      "final class ${1:CommandName}",
+      "{",
+      "    #[ConsoleCommand('${2:command-name}')] ",
+      "    public function run(Console $console): void",
+      "    {",
+      "        $console->writeln('Hello, Tempest!');",
+      "    }",
+      "}"
+    ],
+    "description": "Create a TempestPHP console command."
+  }
+}
