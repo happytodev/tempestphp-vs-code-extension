@@ -41,7 +41,9 @@ export function activate(context: vscode.ExtensionContext) {
         const frequency = await vscode.window.showQuickPick(frequencies, {
           placeHolder: "Select the scheduling frequency",
         });
-        if (!frequency) return; // User cancelled
+        if (!frequency) {
+          return;
+        }; // User cancelled
 
         // Determine the line where the function declaration starts
         const startLine = functionSymbol.range.start.line;
